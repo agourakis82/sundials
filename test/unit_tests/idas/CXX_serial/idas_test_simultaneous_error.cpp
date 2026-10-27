@@ -175,15 +175,16 @@ static void Run(Problem problem)
 
 int main()
 {
-  const std::vector<Problem> problems = {{{3}, {SUN_RCONST(1.0)}},
-                                         {{5}, {SUN_RCONST(1.0)}},
-                                         {{1, 3},
-                                          {SUN_RCONST(1.0), SUN_RCONST(-2.0)}},
-                                         {{3, 5},
-                                          {SUN_RCONST(1.0), SUN_RCONST(-2.0)}},
-                                         {{Sine}, {SUN_RCONST(1.0)}},
-                                         {{1}, {SUN_RCONST(1.0)}}};
-  int failures                        = 0;
+  const std::vector<Problem> problems =
+    {{{3}, {SUN_RCONST(1.0)}},
+     {{5}, {SUN_RCONST(1.0)}},
+     {{1, 3}, {SUN_RCONST(1.0), SUN_RCONST(-2.0)}},
+     {{3, 5}, {SUN_RCONST(1.0), SUN_RCONST(-2.0)}},
+     {{Sine}, {SUN_RCONST(1.0)}},
+     {{1}, {SUN_RCONST(1.0)}},
+     {{1, 3, 5, 2},
+      {SUN_RCONST(1.0), SUN_RCONST(-2.0), SUN_RCONST(0.5), SUN_RCONST(-0.25)}}};
+  int failures = 0;
   for (const auto& problem : problems)
   {
     try
